@@ -3,21 +3,21 @@
 /**
  * Include Advanced Custom Fields.
  *
- * Must install your own ACF version into inc/ in order for this to work.
+ * Must install your own ACF Pro version into inc/ in order for this to work.
  */
 /*add_filter('acf/settings/path', 'acfSettingsPath');
 function acfSettingsPath( $path ) {
-    $path = get_stylesheet_directory() . '/inc/advanced-custom-fields-pro/';
+    $path = get_template_directory() . '/inc/advanced-custom-fields-pro/';
     return $path;
 }
 
 add_filter('acf/settings/dir', 'acfSettingsDir');
 function acfSettingsDir( $dir ) {
-    $dir = get_stylesheet_directory_uri() . '/inc/advanced-custom-fields-pro/';
+    $dir = get_template_directory_uri() . '/inc/advanced-custom-fields-pro/';
     return $dir;
 }
 
-include_once(get_stylesheet_directory() . '/inc/advanced-custom-fields-pro/acf.php' );
+include_once(get_template_directory() . '/inc/advanced-custom-fields-pro/acf.php' );
 */
 
 /**
@@ -25,11 +25,13 @@ include_once(get_stylesheet_directory() . '/inc/advanced-custom-fields-pro/acf.p
  */
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts', 99 );
 function theme_enqueue_scripts() {
-	wp_enqueue_style( 'theme-style', get_stylesheet_directory_uri() . '/style.min.css' );
-    wp_enqueue_style( 'vendor-style', get_stylesheet_directory_uri() . '/vendor.min.css' );
+	wp_enqueue_style( 'theme-style', get_template_directory_uri() . '/style.min.css' );
+    wp_enqueue_style( 'vendor-style', get_template_directory_uri() . '/vendor.min.css' );
 
-    wp_enqueue_script( 'modernizr-script', get_stylesheet_directory_uri() . '/assets/js/dist/modernizr-2.6.2.min.js', array(), '2.6.2', false );
-    wp_enqueue_script( 'gumby-script', get_stylesheet_directory_uri() . '/assets/js/dist/gumby.min.js', array(), '2.6.3', true );
+    wp_enqueue_script( 'modernizr-script', get_template_directory_uri() . '/assets/js/dist/modernizr-2.6.2.min.js', array(), '2.6.2', false );
+    wp_enqueue_script( 'gumby-script', get_template_directory_uri() . '/assets/js/dist/gumby.min.js', array(), '2.6.3', true );
+    wp_enqueue_script( 'vendor-script', get_template_directory_uri() . '/assets/js/dist/vendor.min.js', array(), '', true );
+    wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/assets/js/dist/all.min.js', array(), '', true );
 }
 
 /**
