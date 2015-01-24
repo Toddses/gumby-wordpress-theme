@@ -36,12 +36,6 @@ $ npm install
 
 You may like to edit the bower.json and/or package.json with your own project's information.
 
-Lastly, get to coding with Gulp!
-
-``` sh
-$ gulp
-```
-
 That's it!
 
 ## Customizing
@@ -55,3 +49,11 @@ In `assets/scss/gumby/_custom.scss` you'll find Gumby customizitions. I like to 
 In `assets/scss/styles.scss` you'll find your WordPress theme definition. Edit it with your project specific info.
 
 In `assets/scss` you'll find a handful of sass partials. I like to keep project specific styles in these files. They all start out blank. Add more or remove partials as needed, be sure to edit the `styles.scss` imports if you add or remove files.
+
+## The Gulpfile
+
+I've included an extensive Gupfile that improves my own workflow and should improve yours. Using gulp is entirely optional, but I would highly recommend using a task runner of some sort if you don't like gulp.
+
+In order to start using gulp, you'll need to make a quick modification to `gulpfile.js`:
+
+** TODO: Add gulpfile information **
